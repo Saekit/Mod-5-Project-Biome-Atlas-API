@@ -10,6 +10,7 @@ Biome.destroy_all
 Animal.destroy_all
 Plant.destroy_all
 
+
 #Biomes
 Biome.create(biome_name: "Aquatic", temp_range: "varies from -40F to over 100F", ecosystems: "Freshwater and marine.", biodiversity: "High", image: "/images/aquaticbiome.jpg")
 
@@ -78,7 +79,7 @@ Animal.create(species: "Pronghorn (Antilocapra americana)", lifespan: "10-11 yea
 
 Animal.create(species: "Black Rhinoceros (Diceros bicornis)", lifespan: "30-50 years", size: "4.3-5.9ft tall", prey: "tress and bushes, leaves and fruit", predators: "lions", location: "South Africa, Zimbabwe, southern Tanzania and reintroduced to Botswana, Malawi, Swaziland and Zambia", other_info: "Black rhinoceros are generally thought to be solitary, with the only strong bond between a mother and her calf. ", endangered: true, biome_id: Biome.find_by(biome_name: "Grasslands").id, image: "/images/profile-black-rhino.jpg")
 
-Animal.create(species: "African Wild Dog (Lycaon pictus)", lifespan: "about 10 years", size: "3 ft", prey: "warthogs, rodents, lizards, birds", predators: "lions, hyenas", location: "savanna and arid zones in Africa", other_info: "Uniquely among social carnivores, the females rather than the males scatter from the natal pack once sexually mature and the young are allowed to feed first on carcasses.", endangered: true, biome_id: Biome.find_by(biome_name: "Grasslands").id, image: "/images/profile-awdog.png")
+Animal.create(species: "African Wild Dog (Lycaon pictus)", lifespan: "about 10 years", size: "3 ft", prey: "warthogs, rodents, lizards, birds", predators: "lions, hyenas", location: "savanna and arid zones in Africa", other_info: "Uniquely among social carnivores, the females rather than the males scatter from the natal pack once sexually mature and the young are allowed to feed first on carcasses.", endangered: true, biome_id: Biome.find_by(biome_name: "Grasslands").id, image: "/images/profile-awdogs.png")
 
 Animal.create(species: "African Elephant (Loxodonta)", lifespan: "60-70 years", size: "11ft tall", prey: "grass, shoots, bark, buds of trees and shrubs, fruits, and vegetables", predators: "lions, wild dogs, crocodiles, and hyenas", location: "Sahara Desert", other_info: "The elephant’s gestation period is 22 months – longer than any other land animal in the world.", endangered: false, biome_id: Biome.find_by(biome_name: "Grasslands").id, image: "/images/profile-aelephant.jpg")
 
