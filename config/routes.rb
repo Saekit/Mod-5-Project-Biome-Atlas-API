@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       resources :animals
       resources :plants
       resources :biomes
+      resources :question_answers 
     end
   end
 end

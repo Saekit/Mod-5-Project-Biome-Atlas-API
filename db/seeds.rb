@@ -9,7 +9,7 @@
 Biome.destroy_all
 Animal.destroy_all
 Plant.destroy_all
-
+QuestionAnswer.destroy_all
 
 #Biomes
 Biome.create(biome_name: "Aquatic", temp_range: "varies from -40F to over 100F", ecosystems: "Freshwater and marine.", biodiversity: "High", image: "/images/aquaticbiome.jpg")
@@ -72,6 +72,8 @@ Animal.create(species: "Golden Lion Tamarin (Leontopithecus rosalia)", lifespan:
 
 Animal.create(species: "Bengal tiger (Panthera tigris tigris)", lifespan: "up to 25 years", size: "8.9-10ft long", prey: "larger mammals including deer, wild boar, cattle and goats", predators: "none", location: "primarily in India with smaller populations in Bangladesh,Nepal, Bhutan, China and Myanmar", other_info: "Many subspecies of the tiger are either endangered or already extinct. Humans are the primary cause of this through hunting and the destruction of habitats.", endangered: true, biome_id: Biome.find_by(biome_name: "Rainforest").id, image: "/images/profile-bengal-tiger.jpg")
 
+Animal.create(species: "Helmeted hornbill (Rhinoplax vigil)", lifespan: "up to 50 years", size: "110–120 cm (43–47 in)", prey: "fruit, figs, small animals, including mammals, snakes, and even smaller hornbills", predators: "monkeys and monitor lizards", location: "Malay Peninsula, Sumatra and Borneo", other_info: "The casque (helmetlike structure on the head) accounts for some 11% of its 3 kg weight. Unlike any other hornbill, the casque is almost solid, and is used in head-to-head combat among males. It is a belief among the Punan Bah that a large helmeted hornbill guards the river between life and death.", endangered: true, biome_id: Biome.find_by(biome_name: "Rainforest").id, image: "/images/profile-helmeted-hornbill.jpg")
+
 #Grasslands
 Animal.create(species: "Black-Footed Ferret (Mustela nigripes)", lifespan: "1-6 years", size: "16 in", prey: "prairie dogs, squirrels, mice, and other rodents", predators: "coyotes, badgers, and great-horned owls", location: "across the Great Plains, from southern Canada tonorthern Mexico", other_info: "It is largely nocturnal and solitary, except when breeding or raising litters. Up to 91% of its diet is composed of prairie dogs.", endangered: true, biome_id: Biome.find_by(biome_name: "Grasslands").id, image: "/images/profile-bfferret.jpg")
 
@@ -133,3 +135,17 @@ Plant.create(species: "Peat Moss (Sphagnum)", size: "0.2-10cm (0.1-3.9in) tall",
 #
 # #Deciduous
 Plant.create(species: "Maple (Acer)", size: "50-100ft tall", predators: "white-tailed deer, moose, snowshoe hare, flying squirrels, lepidopertan larvae, and aphids", location: "North America", seed_distribution: "seeds within fruit", other_info: "Maple trees are deciduous, which means they drop their leaves annually in autumn.", biome_id: Biome.find_by(biome_name: "Deciduous Forest").id, image: "/images/profile-mapletree.jpg")
+
+
+#Questions
+QuestionAnswer.create(question: "What biome does the Canada Lynx belong to?", correct: "Taiga", wrong1: "Tundra", wrong2: "Desert", wrong3: "Aquatic")
+QuestionAnswer.create(question: "Where can you find Caribou?", correct: "Tundra", wrong1: "Deciduous Forest", wrong2: "Taiga", wrong3: "Rainforest")
+QuestionAnswer.create(question: "The Amazon River Dolphin lives where?", correct: "Aquatic", wrong1: "Rainforest", wrong2: "Desert", wrong3: "Taiga")
+QuestionAnswer.create(question: "The Fennec fox is found in what biome?", correct: "Desert", wrong1: "Grasslands", wrong2: "Taiga", wrong3: "Deciduous Forest")
+QuestionAnswer.create(question: "Where do Capybara live?", correct: "Rainforest", wrong1: "Deciduous Forest", wrong2: "Aquatic", wrong3: "Tundra")
+
+QuestionAnswer.create(question: "What animal lives in the deepest parts of the sea?", correct: "Dumbo Octopus", wrong1: "Manatee", wrong2: "Amazon River Dolphin ", wrong3: "Capybara")
+QuestionAnswer.create(question: "These rodents live in large tunnel systems beneath the snow in winter, which protect them from predators. Their underground burrows have rest areas, toilet areas, and nesting rooms.", correct: "Lemming", wrong1: "Arctic Fox", wrong2: "Armadillo Girdled Lizard", wrong3: "Black-footed ferret")
+QuestionAnswer.create(question: "They have an uncommon antipredator adaptation, in which it takes its tail in its mouth and rolls into a ball when frightened.", correct: "Armadillo Girdled Lizard", wrong1: "Pronghorn", wrong2: "Peregrine falcon", wrong3: "Addax")
+QuestionAnswer.create(question: "Along with the giraffe, they are the only living members of the family Giraffidae.", correct: "Okapi", wrong1: "Caribou", wrong2: "Dama Gazelle", wrong3: "Addax")
+QuestionAnswer.create(question: "The pair moves rhythmically until they are standing close, throwing their heads back and letting out a fluting call in unison, often triggering other pairs to start duetting, as well.", correct: "Red-Crowned Crane", wrong1: "Sand cat", wrong2: "Blue Morpho Butterfly", wrong3: "Bengal tiger")
