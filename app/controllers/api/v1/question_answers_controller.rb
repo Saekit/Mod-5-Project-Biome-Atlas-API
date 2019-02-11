@@ -25,6 +25,6 @@ class Api::V1::QuestionAnswersController < ApplicationController
   end
 
   def question_answer_params
-    params.permit(:question, :correct, :wrong1, :wrong2, :wrong3)
+    params.permit(:question, :fact, :image)
   end
 end

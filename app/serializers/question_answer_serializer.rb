@@ -1,3 +1,3 @@
 class QuestionAnswerSerializer < ActiveModel::Serializer
-  attributes :id, :question, :correct, :wrong1, :wrong2, :wrong3
+  attributes :id, :question, :fact, :image, :choices
 end
