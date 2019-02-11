@@ -10,6 +10,7 @@ Biome.destroy_all
 Animal.destroy_all
 Plant.destroy_all
 QuestionAnswer.destroy_all
+Choice.destroy_all
 
 #Biomes
 Biome.create(biome_name: "Aquatic", temp_range: "varies from -40F to over 100F", ecosystems: "Freshwater and marine.", biodiversity: "High", image: "/images/aquaticbiome.jpg")
@@ -138,14 +139,49 @@ Plant.create(species: "Maple (Acer)", size: "50-100ft tall", predators: "white-t
 
 
 #Questions
-QuestionAnswer.create(question: "What biome does the Canada Lynx belong to?", correct: "Taiga", wrong1: "Tundra", wrong2: "Desert", wrong3: "Aquatic")
-QuestionAnswer.create(question: "Where can you find Caribou?", correct: "Tundra", wrong1: "Deciduous Forest", wrong2: "Taiga", wrong3: "Rainforest")
-QuestionAnswer.create(question: "The Amazon River Dolphin lives where?", correct: "Aquatic", wrong1: "Rainforest", wrong2: "Desert", wrong3: "Taiga")
-QuestionAnswer.create(question: "The Fennec fox is found in what biome?", correct: "Desert", wrong1: "Grasslands", wrong2: "Taiga", wrong3: "Deciduous Forest")
-QuestionAnswer.create(question: "Where do Capybara live?", correct: "Rainforest", wrong1: "Deciduous Forest", wrong2: "Aquatic", wrong3: "Tundra")
+# QuestionAnswer.create(question: "What biome does the Canada Lynx belong to?", correct: "Taiga", wrong1: "Tundra", wrong2: "Desert", wrong3: "Aquatic")
+# QuestionAnswer.create(question: "Where can you find Caribou?", correct: "Tundra", wrong1: "Deciduous Forest", wrong2: "Taiga", wrong3: "Rainforest")
+# QuestionAnswer.create(question: "The Amazon River Dolphin lives where?", correct: "Aquatic", wrong1: "Rainforest", wrong2: "Desert", wrong3: "Taiga")
+# QuestionAnswer.create(question: "The Fennec fox is found in what biome?", correct: "Desert", wrong1: "Grasslands", wrong2: "Taiga", wrong3: "Deciduous Forest")
+# QuestionAnswer.create(question: "Where do Capybara live?", correct: "Rainforest", wrong1: "Deciduous Forest", wrong2: "Aquatic", wrong3: "Tundra")
+#
+# QuestionAnswer.create(question: "What animal lives in the deepest parts of the sea?", correct: "Dumbo Octopus", wrong1: "Manatee", wrong2: "Amazon River Dolphin ", wrong3: "Capybara")
+# QuestionAnswer.create(question: "These rodents live in large tunnel systems beneath the snow in winter, which protect them from predators. Their underground burrows have rest areas, toilet areas, and nesting rooms.", correct: "Lemming", wrong1: "Arctic Fox", wrong2: "Armadillo Girdled Lizard", wrong3: "Black-footed ferret")
+# QuestionAnswer.create(question: "They have an uncommon antipredator adaptation, in which it takes its tail in its mouth and rolls into a ball when frightened.", correct: "Armadillo Girdled Lizard", wrong1: "Pronghorn", wrong2: "Peregrine falcon", wrong3: "Addax")
+# QuestionAnswer.create(question: "Along with the giraffe, they are the only living members of the family Giraffidae.", correct: "Okapi", wrong1: "Caribou", wrong2: "Dama Gazelle", wrong3: "Addax")
+# QuestionAnswer.create(question: "The pair moves rhythmically until they are standing close, throwing their heads back and letting out a fluting call in unison, often triggering other pairs to start duetting, as well.", correct: "Red-Crowned Crane", wrong1: "Sand cat", wrong2: "Blue Morpho Butterfly", wrong3: "Bengal tiger")
 
-QuestionAnswer.create(question: "What animal lives in the deepest parts of the sea?", correct: "Dumbo Octopus", wrong1: "Manatee", wrong2: "Amazon River Dolphin ", wrong3: "Capybara")
-QuestionAnswer.create(question: "These rodents live in large tunnel systems beneath the snow in winter, which protect them from predators. Their underground burrows have rest areas, toilet areas, and nesting rooms.", correct: "Lemming", wrong1: "Arctic Fox", wrong2: "Armadillo Girdled Lizard", wrong3: "Black-footed ferret")
-QuestionAnswer.create(question: "They have an uncommon antipredator adaptation, in which it takes its tail in its mouth and rolls into a ball when frightened.", correct: "Armadillo Girdled Lizard", wrong1: "Pronghorn", wrong2: "Peregrine falcon", wrong3: "Addax")
-QuestionAnswer.create(question: "Along with the giraffe, they are the only living members of the family Giraffidae.", correct: "Okapi", wrong1: "Caribou", wrong2: "Dama Gazelle", wrong3: "Addax")
-QuestionAnswer.create(question: "The pair moves rhythmically until they are standing close, throwing their heads back and letting out a fluting call in unison, often triggering other pairs to start duetting, as well.", correct: "Red-Crowned Crane", wrong1: "Sand cat", wrong2: "Blue Morpho Butterfly", wrong3: "Bengal tiger")
+#Question 1:
+QuestionAnswer.create(question: "What biome does the Canada Lynx belong to?", fact: "Canada lynx look similar to bobcats, but they mostly live in northern states along the Canadian border or in mountainous regions, while bobcats range across almost the entire Lower 48 states.", image: "/images/gifs/canada-lynx.gif")
+Choice.create(item: "Taiga", answer: true, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Canada Lynx belong to?").id)
+Choice.create(item: "Tundra", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Canada Lynx belong to?").id)
+Choice.create(item: "Desert", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Canada Lynx belong to?").id)
+Choice.create(item: "Aquatic", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Canada Lynx belong to?").id)
+
+#Question 2:
+QuestionAnswer.create(question: "In what biome can you find Caribou?", fact: "Caribou trek north in the summer in one of the largest animal migrations on Earth. They travel more than 600 miles (965 kilometers) along well-traveled routes. They spend the summer feeding on grasses, mushrooms, and plants in the tundra.", image: "/images/gifs/caribou.gif")
+Choice.create(item: "Tundra", answer: true, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
+Choice.create(item: "Deciduous Forest", answer: false, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
+Choice.create(item: "Taiga", answer: false, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
+Choice.create(item: "Rainforest", answer: false, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
+
+#Question 3:
+QuestionAnswer.create(question: "The Amazon River Dolphin lives in what biome?", fact: "The Amazon river dolphins can be anywhere from mostly gray with some pink spots, to almost flamingo pink. And when the dolphins get excited, they can flush bright pink, similar to humans blushing.", image: "/images/gifs/ar-dolphin.gif")
+Choice.create(item: "Aquatic", answer: true, question_answer_id: QuestionAnswer.find_by(question: "The Amazon River Dolphin lives in what biome?").id)
+Choice.create(item: "Rainforest", answer: false, question_answer_id: QuestionAnswer.find_by(question: "The Amazon River Dolphin lives in what biome?").id)
+Choice.create(item: "Desert", answer: false, question_answer_id: QuestionAnswer.find_by(question: "The Amazon River Dolphin lives in what biome?").id)
+Choice.create(item: "Taiga", answer: false, question_answer_id: QuestionAnswer.find_by(question: "The Amazon River Dolphin lives in what biome?").id)
+
+#Question 4:
+QuestionAnswer.create(question: "What animal lives in the deepest parts of the sea?", fact: "Dumbo octopuses adapt to such a high pressure environment by having soft, jelly-like bodies that easily change shape and float.", image: "/images/gifs/dumbo-octo.gif")
+Choice.create(item: "Dumbo Octopus", answer: true, question_answer_id: QuestionAnswer.find_by(question: "What animal lives in the deepest parts of the sea?").id)
+Choice.create(item: "Manatee", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal lives in the deepest parts of the sea?").id)
+Choice.create(item: "Amazon River Dolphin", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal lives in the deepest parts of the sea?").id)
+Choice.create(item: "Capybara", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal lives in the deepest parts of the sea?").id)
+
+#Question 5:
+QuestionAnswer.create(question: "What animal likes to rolls into a ball when frightened?", fact: "This heavily armoured reptile is named after the armadillo for its ability to roll itself into an almost impregnable ball when threatened. In this position, the spiny scales covering the neck, body and tail are presented to any potential predator, protecting the soft belly.", image: "/images/transparent-pics/desert/armadillolizard.jpg")
+Choice.create(item: "Armadillo Girdled Lizard", answer: true, question_answer_id: QuestionAnswer.find_by(question: "What animal likes to rolls into a ball when frightened?").id)
+Choice.create(item: "Pronghorn", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal likes to rolls into a ball when frightened?").id)
+Choice.create(item: "Peregrine falcon", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal likes to rolls into a ball when frightened?").id)
+Choice.create(item: "Addax", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal likes to rolls into a ball when frightened?").id)
