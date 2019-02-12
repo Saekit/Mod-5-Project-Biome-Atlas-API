@@ -40,6 +40,8 @@ Animal.create(species: "Greenland Shark (Somniosus microcephalus)", lifespan: "3
 
 Animal.create(species: "Amazon River Dolphin (Inia geoffrensis)", lifespan: "10-30 years", size: "up to 2.5 meters (8.2ft)", prey: "up to 53 different species of fish, such as croakers, catfish, tetras and piranhas, river turtles and freshwater crabs", predators: "anacondas, jaguars and caimans", location: "Amazon basin, the upper Madeira River in Bolivia, and the Orinoco basin", other_info: "While hunting is a major threat, in recent decades greater impacts on population have been due to the loss of habitat and inadvertent entanglement in fishing lines.", endangered: true, biome_id: Biome.find_by(biome_name: "Aquatic").id, image: "/images/profile-ardolphin.jpg")
 
+Animal.create(species: "Sea angels (clade Gymnosomata)", lifespan: "1 to 2 years", size: "1 to 2 inches long", prey: "sea butterflies", predators: "It has no predators since it produces a molecule called pteroenone. This secretion prevents the predators from eating the sea angels.", location: "These organisms have a wide geographic range, from polar regions, under sea ice, to equatorial (tropic) seas", other_info: "Sea Angels are large groups of small, swimming sea slugs, that has a scientific name of Gymnosomata. These creatures with their translucent, gelatinous skin and luminous glow almost makes them seem unearthly, but these sea angels are actually real, living in the depths of our ocean. By rowing their 'wings' back and forth at 1–3 Hz, the sea angels swim at speeds up to 100 mm/s (0.22 mph). This is about twice as fast as their prey, the sea butterfly.", endangered: false, biome_id: Biome.find_by(biome_name: "Aquatic").id, image: "/images/profile-seaangel.jpg")
+
 #Tundra
 Animal.create(species: "Arctic fox (Vulpes lagopus)", lifespan: "3-4 years", size: "46-68cm (18-27 in)", prey: "lemmings, voles, ringed seal pups, fish, waterfowl, seabirds, carrion, berries, seaweed, insects", predators: "golden eagles, polar bears, wolverines, red foxes, wolves, grizzly bears", location: "Arctic regions of the Northern Hemisphere", other_info: "Arctic foxes form monogamous pairs during the breeding season and they stay together to raise their young in complex underground dens.", endangered: false, biome_id: Biome.find_by(biome_name: "Tundra").id, image: "/images/profile-arctic-fox.jpg")
 
@@ -125,6 +127,8 @@ Plant.create(species: "Saguaro Cactus (Carnegiea gigantca)", size: "40-60 ft tal
 # #Rainforest
 Plant.create(species: "Heliconia (Heliconia spp.)", size: "3-15 ft tall", predators: "many insect species", location: "tropical Americas, western Pacific and Maluku", seed_distribution: "considered as geophyte, which means that they reproduce not only with their seeds, but also by their underground organs, which its main function is to serve as a storage for nutrients and water, therefore making sure of the species survival", other_info: "The heliconia's flowers are tiny and found inside these bracts, which are so large and colorful that they almost hide the flowers altogether. This keeps the flower's sweet nectar tucked away so that only specialized birds can get to it.", biome_id: Biome.find_by(biome_name: "Rainforest").id, image: "/images/profile-heliconia.jpg")
 
+Plant.create(species: "Orchid (Orchidaceae)", size: "12-14 feet long", predators: "Slugs and snails", location: "southern Central America, northwest South America, and countries that lie along the Andes Mountains", seed_distribution: "They are pollinated and the pollen and seeds spread to other areas.", other_info: "Popular around the globe for their beauty and variety, orchids are the largest family of plants in the entire world. There are 25,000 - 30,000 different species of orchid, at least 10,000 of which can be found in the tropics.", biome_id: Biome.find_by(biome_name: "Rainforest").id, image: "/images/profile-orchid.jpg")
+
 #
 # #Grasslands
 Plant.create(species: "Purple Needlegrass (Nassella pulchra)", size: "3.3ft", predators: "elk, deer, pronghorns, and cattle", location: "California", seed_distribution: "Because grasses are wind pollinated, they do not need showy flowers to attract insects.", other_info: "The extensive root system can reach 20 feet (6.1 m) deep into the soil, making the grass more tolerant of drought.", biome_id: Biome.find_by(biome_name: "Grasslands").id, image: "/images/profile-purple-needlegrass.jpg")
@@ -138,19 +142,6 @@ Plant.create(species: "Peat Moss (Sphagnum)", size: "0.2-10cm (0.1-3.9in) tall",
 Plant.create(species: "Maple (Acer)", size: "50-100ft tall", predators: "white-tailed deer, moose, snowshoe hare, flying squirrels, lepidopertan larvae, and aphids", location: "North America", seed_distribution: "seeds within fruit", other_info: "Maple trees are deciduous, which means they drop their leaves annually in autumn.", biome_id: Biome.find_by(biome_name: "Deciduous Forest").id, image: "/images/profile-mapletree.jpg")
 
 
-#Questions
-# QuestionAnswer.create(question: "What biome does the Canada Lynx belong to?", correct: "Taiga", wrong1: "Tundra", wrong2: "Desert", wrong3: "Aquatic")
-# QuestionAnswer.create(question: "Where can you find Caribou?", correct: "Tundra", wrong1: "Deciduous Forest", wrong2: "Taiga", wrong3: "Rainforest")
-# QuestionAnswer.create(question: "The Amazon River Dolphin lives where?", correct: "Aquatic", wrong1: "Rainforest", wrong2: "Desert", wrong3: "Taiga")
-# QuestionAnswer.create(question: "The Fennec fox is found in what biome?", correct: "Desert", wrong1: "Grasslands", wrong2: "Taiga", wrong3: "Deciduous Forest")
-# QuestionAnswer.create(question: "Where do Capybara live?", correct: "Rainforest", wrong1: "Deciduous Forest", wrong2: "Aquatic", wrong3: "Tundra")
-#
-# QuestionAnswer.create(question: "What animal lives in the deepest parts of the sea?", correct: "Dumbo Octopus", wrong1: "Manatee", wrong2: "Amazon River Dolphin ", wrong3: "Capybara")
-# QuestionAnswer.create(question: "These rodents live in large tunnel systems beneath the snow in winter, which protect them from predators. Their underground burrows have rest areas, toilet areas, and nesting rooms.", correct: "Lemming", wrong1: "Arctic Fox", wrong2: "Armadillo Girdled Lizard", wrong3: "Black-footed ferret")
-# QuestionAnswer.create(question: "They have an uncommon antipredator adaptation, in which it takes its tail in its mouth and rolls into a ball when frightened.", correct: "Armadillo Girdled Lizard", wrong1: "Pronghorn", wrong2: "Peregrine falcon", wrong3: "Addax")
-# QuestionAnswer.create(question: "Along with the giraffe, they are the only living members of the family Giraffidae.", correct: "Okapi", wrong1: "Caribou", wrong2: "Dama Gazelle", wrong3: "Addax")
-# QuestionAnswer.create(question: "The pair moves rhythmically until they are standing close, throwing their heads back and letting out a fluting call in unison, often triggering other pairs to start duetting, as well.", correct: "Red-Crowned Crane", wrong1: "Sand cat", wrong2: "Blue Morpho Butterfly", wrong3: "Bengal tiger")
-
 #Question 1:
 QuestionAnswer.create(question: "What biome does the Canada Lynx belong to?", fact: "Canada lynx look similar to bobcats, but they mostly live in northern states along the Canadian border or in mountainous regions, while bobcats range across almost the entire Lower 48 states.", image: "/images/gifs/canada-lynx.gif")
 Choice.create(item: "Taiga", answer: true, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Canada Lynx belong to?").id)
@@ -159,11 +150,11 @@ Choice.create(item: "Desert", answer: false, question_answer_id: QuestionAnswer.
 Choice.create(item: "Aquatic", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Canada Lynx belong to?").id)
 
 #Question 2:
-QuestionAnswer.create(question: "In what biome can you find Caribou?", fact: "Caribou trek north in the summer in one of the largest animal migrations on Earth. They travel more than 600 miles (965 kilometers) along well-traveled routes. They spend the summer feeding on grasses, mushrooms, and plants in the tundra.", image: "/images/gifs/caribou.gif")
-Choice.create(item: "Tundra", answer: true, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
-Choice.create(item: "Deciduous Forest", answer: false, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
-Choice.create(item: "Taiga", answer: false, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
-Choice.create(item: "Rainforest", answer: false, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
+QuestionAnswer.create(question: "What fox is native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra biome?", fact: "Arctic foxes have excellent sense of hearing and sense of smell which are used for detection of the prey. They can detect and catch the prey located underneath the snow.", image: "/images/gifs/arcticfox.gif")
+Choice.create(item: "Arctic Fox", answer: true, question_answer_id: QuestionAnswer.find_by(question: "What fox is native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra biome?").id)
+Choice.create(item: "Red Fox", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What fox is native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra biome?").id)
+Choice.create(item: "Fennec Fox", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What fox is native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra biome?").id)
+Choice.create(item: "Gray Fox", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What fox is native to the Arctic regions of the Northern Hemisphere and common throughout the Arctic tundra biome?").id)
 
 #Question 3:
 QuestionAnswer.create(question: "The Amazon River Dolphin lives in what biome?", fact: "The Amazon river dolphins can be anywhere from mostly gray with some pink spots, to almost flamingo pink. And when the dolphins get excited, they can flush bright pink, similar to humans blushing.", image: "/images/gifs/ar-dolphin.gif")
@@ -179,9 +170,31 @@ Choice.create(item: "Manatee", answer: false, question_answer_id: QuestionAnswer
 Choice.create(item: "Amazon River Dolphin", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal lives in the deepest parts of the sea?").id)
 Choice.create(item: "Capybara", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal lives in the deepest parts of the sea?").id)
 
-#Question 5:
-QuestionAnswer.create(question: "What animal likes to rolls into a ball when frightened?", fact: "This heavily armoured reptile is named after the armadillo for its ability to roll itself into an almost impregnable ball when threatened. In this position, the spiny scales covering the neck, body and tail are presented to any potential predator, protecting the soft belly.", image: "/images/transparent-pics/desert/armadillolizard.jpg")
-Choice.create(item: "Armadillo Girdled Lizard", answer: true, question_answer_id: QuestionAnswer.find_by(question: "What animal likes to rolls into a ball when frightened?").id)
-Choice.create(item: "Pronghorn", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal likes to rolls into a ball when frightened?").id)
-Choice.create(item: "Peregrine falcon", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal likes to rolls into a ball when frightened?").id)
-Choice.create(item: "Addax", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal likes to rolls into a ball when frightened?").id)
+
+#Question 5
+QuestionAnswer.create(question: "What biome does the Grizzly Bear live in?", fact: "It can be up to 8 feet tall when it stands on back feet. Although grizzly bears are large animals, 75% of their diet is comprised of berries, leaves and nuts. They also like to eat fish, rodents and moose.", image: "/images/gifs/grizzly.gif")
+Choice.create(item: "Deciduous Forest", answer: true, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Grizzly Bear live in?").id)
+Choice.create(item: "Desert", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Grizzly Bear live in?").id)
+Choice.create(item: "Rainforest", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Grizzly Bear live in?").id)
+Choice.create(item: "Tundra", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What biome does the Grizzly Bear live in?").id)
+
+#Question 6
+QuestionAnswer.create(question: "What animal is considered to be the world's largest rodent?", fact: "Like beavers, capybaras are strong swimmers. Their pig-shaped bodies are adapted for life in bodies of water found in forests, seasonally flooded savannas, and wetlands. Their toes are partially webbed for paddling around, and their reddish to dark brown fur is long and brittle—perfect for drying out quickly on land.", image: "/images/gifs/capybara.gif")
+Choice.create(item: "Capybara", answer: true, question_answer_id: QuestionAnswer.find_by(question: "What animal is considered to be the world's largest rodent?").id)
+Choice.create(item: "Beaver", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal is considered to be the world's largest rodent?").id)
+Choice.create(item: "Porcupine", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal is considered to be the world's largest rodent?").id)
+Choice.create(item: "Gopher", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal is considered to be the world's largest rodent?").id)
+
+#Question 7
+QuestionAnswer.create(question: "What animal's scientific name means 'painted wolf'?", fact: "The scientific name for the African Wild dog means 'painted wolf'. No two wild dogs have the same markings, which makes them easily identifiable as individuals.", image: "/images/gifs/awdog.gif")
+Choice.create(item: "African Wild Dog", answer: true, question_answer_id: QuestionAnswer.find_by(question: "What animal's scientific name means 'painted wolf'?").id)
+Choice.create(item: "Red wolf", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal's scientific name means 'painted wolf'?").id)
+Choice.create(item: "Arctic wolf", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal's scientific name means 'painted wolf'?").id)
+Choice.create(item: "Black-Footed Ferret", answer: false, question_answer_id: QuestionAnswer.find_by(question: "What animal's scientific name means 'painted wolf'?").id)
+
+#Question 8
+QuestionAnswer.create(question: "In what biome can you find Caribou?", fact: "Caribou trek north in the summer in one of the largest animal migrations on Earth. They travel more than 600 miles (965 kilometers) along well-traveled routes. They spend the summer feeding on grasses, mushrooms, and plants in the tundra.", image: "/images/gifs/caribou.gif")
+Choice.create(item: "Tundra", answer: true, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
+Choice.create(item: "Deciduous Forest", answer: false, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
+Choice.create(item: "Taiga", answer: false, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
+Choice.create(item: "Rainforest", answer: false, question_answer_id: QuestionAnswer.find_by(question: "In what biome can you find Caribou?").id)
