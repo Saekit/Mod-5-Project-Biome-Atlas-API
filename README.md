@@ -1,24 +1,23 @@
-# README
+Welcome to Biome Atlas, a single page web application aimed at school children to teach them all about Biomes and the animals and plants that live within them!
+This is the backend part of my project, to have a working project please also fork the frontend located here: https://github.com/Saekit/Mod-5-Project-Biome-Atlas-Frontend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Instructions for use:
 
-Things you may want to cover:
+Fork and clone this repo.
+In your terminal, within the directory you saved it in, enter: `cd Mod-5-Project-Biome-Atlas-API`
+Enter: `atom .` or open it in your own code editor
+You are now in the rails API file
+In your terminal run: `rails db:migrate`
+Then run: `rails db:seed`
+Run the API using: `rails s -p 3001`
 
-* Ruby version
+To open the frontend, fork and clone the frontend repo linked above.
+In your terminal, within the directory you saved it in, enter: `cd Mod-5-Project-Biome-Atlas-Frontend`
+Enter: `atom .` or open it in your own code editor
+You are now in the React part of this project
+To run enter: `yarn start`
+If it does not start, enter: `yarn install` then `yarn start`
+Then you should be able to see the Biome Atlas in localhost:3000!
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Thank you for checking out my project! Have fun!
+Please contact me if you have any questions!
